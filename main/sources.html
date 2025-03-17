@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-100% coded by myself!->
+<html lang=en>
+<body style="background-color: #32b2eb"></body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max's Website</title>
+    <style>
+        
+        /* Text */
+        .title{
+            font-family: "Medodica";
+            font-size: 60px;
+        }
+        .text1{
+            font-family: arial;
+            font-size: 30px
+        }
+        
+        /* Textboxes */
+        .textboxes{
+            display: inline-flex;
+        }
+        
+        .textbox1{
+            background-color: none;
+            width: 300px;
+            border: 7.5px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .textbox2{
+            background-color: none;
+            width: 500px;
+            border: 7.5px solid #00FFB6;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        /* Nav bar */  
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #1997E0;
+          font-family: "Roboto";
+          font-size: 20px
+        }
+
+        li {
+            float: left;
+        }   
+
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        .activebutton {
+            background-color: #4D57EA;
+        }
+        .activetime {
+            background-color: #43C7EB;
+        }
+        .defaultactive{
+            background-color: #1997E0;
+        }
+        .time-right{
+            float: right;
+        }
+        
+        /* Images */
+        .mountain-image-size{
+            max-width: 100%;
+            max-height:100%;
+        }
+        
+        /* Fonts */
+        .roboto-<uniquifier> {
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-variation-settings: "width" 100;
+        }
+        
+        @font-face{
+            font-family: "Medodica";
+            src: url(/assets/MedodicaRegular.otf)
+        }
+        
+        /* Centering */
+        
+    </style>
+    
+    <!-- Font (roboto) embedded from fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!--Time updating script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script>
+        // Updating time
+               function updateTime() {
+                document.getElementById("mainDiv").innerHTML = moment().format('MMMM Do YYYY, h:mm a');
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                updateTime();
+                setInterval(updateTime, 1000);
+            });
+    </script>
+</head>
+<body>
+    <img src="assets/mountains-topbar3.png" alt="Mountains from 2828 meters above!" class="mountain-image-size">
+     <div class="bar">
+        <ul>
+            <li><a class="defaultactive" href="main.html">Home</a></li>
+            <li><a class="defaultactive" href="cv.html">Resume</a></li>
+            <li><a class="activebutton" href="sources.html">Sources</a></li>
+            <li class="time-right"><a id="mainDiv" class="activetime" href="https://time.is/">Date and Time</a></li>
+        </ul>
+    </div>
+                      <div class="text1">
+        <div class="title"><b>Sources:</b></div>
+        <br>
+        These websites helped me build this website for the project:
+        <br>
+        <br>
+        Huge thanks to <a href="https://www.w3schools.com/html/default.asp">https://www.w3schools.com</a>!
+        <br>
+        <br>
+        Navigation bar: <a href="https://www.w3schools.com/css/css_navbar_horizontal.asp">https://www.w3schools.com/css/css_navbar_horizontal.asp</a>
+        <br>
+        Text boxes: <a href="https://www.w3schools.com/css/css_outline.asp">https://www.w3schools.com/css/css_outline.asp</a>
+        <br>
+        Centering images: <a href="https://www.w3schools.com/howto/howto_css_image_center.asp">https://www.w3schools.com/howto/howto_css_image_center.asp</a>
+        <br>
+        Roboto font: <a href="https://fonts.google.com/specimen/Roboto">https://fonts.google.com/specimen/Roboto</a>
+        <br>
+        Medodica font: <a href="https://www.1001fonts.com/medodica-font.html">https://www.1001fonts.com/medodica-font.html</a>
+        <br>
+        Time: <a href="https://cdnjs.com/libraries/moment.js">https://cdnjs.com/libraries/moment.js</a> and <a href="https://momentjs.com/">https://momentjs.com/</a>
+        <br>
+        Images shown with button: <a href="https://www.geeksforgeeks.org/how-to-show-images-on-click-using-html/">https://www.geeksforgeeks.org/how-to-show-images-on-click-using-html/</a>
+        <br>
+        <br>
+        The images and resume are created by me!
+    </div>
+</body>
+</html>
